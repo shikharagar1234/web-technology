@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+<style>
+body{
+font-weight:bold;
+}
+.but{
+font-weight:bold;
+color:green;
+}
+</style>
+</head>
+<body>
+
+<hr>
+
+<form name="myForm" onsubmit="return validateForm()" >
+          <div  style="padding-top:50px">
+                    <h3 class="text-center">Register Page </a></h3>
+               </div>
+               <div  style="padding-top:00px">
+                         <h5 class="text-right"><a href = "/users/register">For Login Page</a></h5>
+                    </div>
+      </div>
+</div>
+<div class="row" style = "padding-top:100px">
+     <div class="col-xs-6 mx-auto" style =" width:800px">
+          <div class="card card-body">
+               <h3 class="text-center">Account Register</h3>
+               <form>
+                    <div class="form-group">
+                         <label for="text">FIRST NAME</label>
+                         <input type="text" name="text" class="form-control" required>
+                    </div>
+                    <br><br>
+                    <div class="form-group">
+                         <label for="text">LAST NAME</label>
+                         <input type="text" name="text" class="form-control" required>
+                    </div>
+                    <br><br>
+                    <div class="form-group">
+                         <label for="email">EMAIL</label>
+                         <input type="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                              <label >MOBILE No.</label><br>
+                              <input type="text" name="mobile">
+                    </div>
+                   
+                    <div class="form-group">
+                         <input type="radio" name="gender" value="male" checked> Male<br>
+                         <input type="radio" name="gender" value="female"> Female<br>
+                         <input type="radio" name="gender" value="other"> Other<br><br>
+                    </div>
+                    <div class="form-group">
+                              <label for="password">PASSWORD</label>
+                              <input type="password" name="password" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+               </form>
+          </div>
+     </div>
+</form>
+</body>
+
+<script>
+function validateForm() {
+var str = document.forms["myForm"]["mobile"].value;
+if(str.length==10){
+    if (!(str.match(/(7|8|9)\d{9}/))) {
+        alert("Invalid mobile number"); 
+       return false;
+    }
+}
+else
+alert("Mobile Number should be 10 digit");
+
+var stre = document.forms["myForm"]["email"].value;
+if (!(stre.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/))) {
+        alert("Invalid email-id"); 
+       return false;
+    }
+
+
+var strp = document.getElementById("psw").value;
+if(strp.length>5){
+if (!(strp.match(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/))) {
+        alert("Password must contain\none uppercase\none lowercase\none number"); 
+       return false;
+    }
+}
+else
+alert("password must be atleast 6 character long");
+
+
+
+}
+</script>
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+<style>
+body{
+font-weight:bold;
+}
+.but{
+font-weight:bold;
+color:green;
+}
+</style>
+</head>
+<body>
+
+<hr>
+
+<form name="myForm" onsubmit="return validateForm()">
+<div class="container">
+                    <div  style="padding-top:50px">
+                         <h3 class="text-center">Login Page </a></h3>
+                    </div>
+                    <div  style="padding-top:50px ">
+                         <h5 class="text-right"><a href = "/users/register">For Register Page</a></h5>
+                    </div>
+ </div>
+               
+               <div class="row" style = "padding-top:100px">
+                    <div class="col-xs-6 mx-auto"style = "width : 600px">
+                         <div class="card card-body">
+                              <h3 class="text-center">Account Login</h3>
+                              <form>
+                                   <div class="form-group">
+                                        <label for="email">EMAIL</label>
+                                        <input type="email" name="email" class="form-control" required>
+                                   </div>
+                                   <div class="form-group">
+                                        <label for="password">PASSWORD</label>
+                                        <input type="password" name="password" class="form-control" required>
+                                   </div>
+                                   
+                                   
+                                   <button type="submit" class="btn btn-primary">Submit</button>
+                              </form>
+                         </div>
+                    </div>
+                    </div>
+                    </form>
+                    </body>
+                    </html>
